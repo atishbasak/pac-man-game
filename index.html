@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Neon Pac-Man</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <canvas id="bg"></canvas>
+  <div id="grid"></div>
+  <div id="fx"></div>
+  <div id="app">
+    <div id="hud">
+      <div><small>SCORE</small><b id="sc">0</b></div>
+      <div><small>LEVEL <b id="lv">1</b></small>
+        <div id="lives"></div>
+      </div>
+      <div><small>HIGH</small><b id="hi">0</b></div>
+    </div>
+    <div id="stage">
+      <div id="board"><canvas id="cv"></canvas>
+        <div id="banner"></div>
+        <div id="ov">
+          <h1>PAC-MAN</h1>
+          <div id="intro"><canvas id="ic"></canvas>
+            <div id="cap"></div>
+            <ul id="cast">
+              <li style="--c:#ff2a2a;--d:.3s">BLINKY <em>CHASER</em></li>
+              <li style="--c:#ffb8de;--d:.7s">PINKY <em>AMBUSHER</em></li>
+              <li style="--c:#00e5ff;--d:1.1s">INKY <em>FICKLE</em></li>
+              <li style="--c:#ffa63d;--d:1.5s">CLYDE <em>SHY</em></li>
+            </ul>
+          </div>
+          <p>Eat all dots, avoid ghosts.<br>Arrows / WASD, swipe, D-pad or gamepad.<br>P = pause, M = sound</p><button
+            id="go">START</button>
+        </div>
+      </div>
+    </div>
+    <div id="bar"><button id="pb">PAUSE</button><button id="mb">SOUND: ON</button></div>
+    <div id="pad"><button class="u" data-d="0,-1" aria-label="Up">▲</button><button class="l" data-d="-1,0"
+        aria-label="Left">◀</button><button class="d" data-d="0,1" aria-label="Down">▼</button><button class="r"
+        data-d="1,0" aria-label="Right">▶</button></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
